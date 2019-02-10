@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!--Franjas de la bandera de Venezuela-->
+    <color name="Franja_amarilla_venezuela">#FFFF00</color>
+    <color name="Franja_azul_venezuela">#0E4BEF</color>
+    <color name="Franja_roja_venezuela">#E71837</color>
+
+    <!--Franjas de la bandera de Chile-->
+    <color name="Franja_blanca_chile">#FFFFFF</color>
+    <color name="Franja_azul_chile">#0E4BEF</color>
+    <color name="Franja_roja_chile">#E71837</color>
+</resources>
