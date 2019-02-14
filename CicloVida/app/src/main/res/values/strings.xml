@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">CicloVida</string>
+
+    <string name="Boton_activity1">Ir al Activity 2</string>
+    <string name="Boton_activity2">Ir al Activity 1</string>
+
+
+</resources>
