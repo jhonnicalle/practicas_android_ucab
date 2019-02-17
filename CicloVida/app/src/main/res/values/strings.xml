@@ -4,5 +4,19 @@
     <string name="Boton_activity1">Ir al Activity 2</string>
     <string name="Boton_activity2">Ir al Activity 1</string>
 
+    <string name="Create_activity1">onCreate</string>
+    <string name="Start_activity1">onStart</string>
+    <string name="Resume_activity1">onResume</string>
+    <string name="Pause_activity1">onPause</string>
+    <string name="Stop_activity1">onStop</string>
+
+    <string name="Create_activity2">onCreate</string>
+    <string name="Start_activity2">onStart</string>
+    <string name="Resume_activity2">onResume</string>
+    <string name="Pause_activity2">onPause</string>
+    <string name="Stop_activity2">onStop</string>
+
+    <string name="Titulo_activity1">Activity 1 - Contador</string>
+    <string name="Titulo_activity2">Activity 2 - Contador</string>
 
 </resources>
