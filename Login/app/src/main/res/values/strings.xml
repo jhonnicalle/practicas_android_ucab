@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">LoginCorreo</string>
+
+
+    <!--Vista 1-->
+    <string name="Titulo_App">LOGIN APP</string>
+    <string name="Correo_electronico">Correo Electronico</string>
+    <string name="Contraseña">Contraseña</string>
+
+    <!--Vista 2-->
+
+    <string name="Bienvenido">Bienvenido</string>
+    <string name="Usuario">Usuario</string>
+    <string name="Mensaje">Ingrese un número</string>
+    <string name="Boton">Evaluar</string>
+</resources>
