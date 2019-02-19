@@ -1,7 +1,10 @@
 package com.example.logincorreo;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 
 import java.util.regex.Matcher;
@@ -9,12 +12,16 @@ import java.util.regex.Pattern;
 
 public class MainActivity extends AppCompatActivity {
 
-    EditText =
+    private EditText et_correo, et_contraseña;
+    private Button btn_ingresar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        et_correo = (EditText)findViewById(R.id.et_correo);
+        et_contraseña = (EditText)findViewById(R.id.et_contraseña);
 
 
     }
@@ -34,4 +41,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
+    public void BotonAceptar (View vista){
+        boolean esValido = isEmailValid(et_correo.getText().toString());
+
+        if (esValido){
+            Intent intent= new Intent(MainActivity.this, ParImparActivity.class);
+            startActivity(intent);
+        }
+
+    }
 }

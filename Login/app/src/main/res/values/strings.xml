@@ -6,6 +6,9 @@
     <string name="Titulo_App">LOGIN APP</string>
     <string name="Correo_electronico">Correo Electronico</string>
     <string name="Contraseña">Contraseña</string>
+    <string name="Ingresar">Ingresar</string>
+    <string name="Mensaje_correo">Ingresar correo</string>
+    <string name="Mensaje_contraseña">Ingresar contraseña</string>
 
     <!--Vista 2-->
 
