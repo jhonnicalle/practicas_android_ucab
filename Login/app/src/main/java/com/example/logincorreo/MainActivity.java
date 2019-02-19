@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity {
 
         if (esValido){
             Intent intent= new Intent(MainActivity.this, ParImparActivity.class);
+            intent.putExtra("Usuario", et_correo.getText().toString());
             startActivity(intent);
         }
 

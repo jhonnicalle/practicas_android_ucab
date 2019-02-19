@@ -6,10 +6,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class ParImparActivity extends AppCompatActivity {
 
+    TextView tv_usuario;
     EditText et_numero;
 
 
@@ -18,30 +20,53 @@ public class ParImparActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.par_impar_activity);
 
+        String usuario = getIntent().getStringExtra("Usuario");
+
+        tv_usuario = (TextView)findViewById(R.id.tv_usuario);
+        tv_usuario.setText(usuario);
+
         et_numero = (EditText)findViewById(R.id.et_numero);
     }
 
 
     public void BotonComprobar (){
-        ComprobarNumero(Integer.parseInt(et_numero.toString()));
-    }
+//        ComprobarNumero(Integer.parseInt(et_numero.getText().toString()));
+        String valor = et_numero.getText().toString();
+        int num = Integer.parseInt(valor);
 
-    public void ComprobarNumero(int numero){
-        int contador = 0;
+        int contador = 2;
+        boolean primo = true;
+        String resul="";
 
-        for(int i = 1; i <= numero; i++)
-        {
-            if((numero % i) == 0)
-            {
+        while ((primo)&&(contador != num)){
+            if (num % contador == 0 || num == 1){
+                primo = false;
                 contador++;
             }
         }
-
-        if(contador <= 2)
-        {
-            Toast.makeText(this,"El numero es primo",Toast.LENGTH_LONG).show();
+        if (primo == false){
+            Toast.makeText(this,"El número es primo",Toast.LENGTH_LONG).show();
         }else{
-            Toast.makeText(this,"El numero no es primo",Toast.LENGTH_LONG).show();
+            Toast.makeText(this,"El número no es primo",Toast.LENGTH_LONG).show();
         }
     }
+
+//    public void ComprobarNumero(int numero){
+//        int contador = 0;
+//
+//        for(int i = 1; i <= numero; i++)
+//        {
+//            if((numero % i) == 0)
+//            {
+//                contador++;
+//            }
+//        }
+//
+//        if(contador <= 2)
+//        {
+//            Toast.makeText(this,"El numero es primo",Toast.LENGTH_LONG).show();
+//        }else{
+//            Toast.makeText(this,"El numero no es primo",Toast.LENGTH_LONG).show();
+//        }
+//    }
 }
