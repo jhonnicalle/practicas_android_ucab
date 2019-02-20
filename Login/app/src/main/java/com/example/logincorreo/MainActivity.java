@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         et_correo = (EditText)findViewById(R.id.et_correo);
         et_contraseña = (EditText)findViewById(R.id.et_contraseña);
 
+       // btn_ingresar.findViewById(R.id.btn_comprobar);
+//        btn_ingresar.setOnClickListener(myhandler1);
 
     }
 
@@ -41,14 +43,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
 
-    public void BotonAceptar (View vista){
-        boolean esValido = isEmailValid(et_correo.getText().toString());
+//    View.OnClickListener myhandler1 = new View.OnClickListener() {
+        public void onClick (View v){
+            boolean esValido = isEmailValid(et_correo.getText().toString());
 
-        if (esValido){
-            Intent intent= new Intent(MainActivity.this, ParImparActivity.class);
-            intent.putExtra("Usuario", et_correo.getText().toString());
-            startActivity(intent);
+            if (esValido){
+                Intent intent= new Intent(MainActivity.this, PrimoActivity.class);
+                intent.putExtra("Usuario", et_correo.getText().toString());
+                startActivity(intent);
+            }
+
         }
-
-    }
+//    };
 }

@@ -1,6 +1,5 @@
 package com.example.logincorreo;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -9,11 +8,11 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class ParImparActivity extends AppCompatActivity {
+public class PrimoActivity extends AppCompatActivity {
 
-    TextView tv_usuario;
-    EditText et_numero;
-
+    private TextView tv_usuario;
+    private EditText et_numero;
+    private Button boton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,28 +25,30 @@ public class ParImparActivity extends AppCompatActivity {
         tv_usuario.setText(usuario);
 
         et_numero = (EditText)findViewById(R.id.et_numero);
+
+        //boton.findViewById(R.id.btn_evaluar);
     }
 
 
-    public void BotonComprobar (){
+    public void BotonComprobar (View view){
 //        ComprobarNumero(Integer.parseInt(et_numero.getText().toString()));
         String valor = et_numero.getText().toString();
         int num = Integer.parseInt(valor);
 
         int contador = 2;
         boolean primo = true;
-        String resul="";
+        //String resul="";
 
-        while ((primo)&&(contador != num)){
+        while ((primo)&&(contador != num)) {
             if (num % contador == 0 || num == 1){
                 primo = false;
-                contador++;
             }
+            contador++;
         }
         if (primo == false){
-            Toast.makeText(this,"El número es primo",Toast.LENGTH_LONG).show();
-        }else{
             Toast.makeText(this,"El número no es primo",Toast.LENGTH_LONG).show();
+        }else{
+            Toast.makeText(this,"El número es primo",Toast.LENGTH_LONG).show();
         }
     }
 
