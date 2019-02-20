@@ -1,5 +1,6 @@
 package com.example.logincorreo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -37,7 +38,7 @@ public class PrimoActivity extends AppCompatActivity {
 
         int contador = 2;
         boolean primo = true;
-        //String resul="";
+        String resul="";
 
         while ((primo)&&(contador != num)) {
             if (num % contador == 0 || num == 1){
@@ -50,6 +51,9 @@ public class PrimoActivity extends AppCompatActivity {
         }else{
             Toast.makeText(this,"El número es primo",Toast.LENGTH_LONG).show();
         }
+
+        Intent intent= new Intent(PrimoActivity.this, MainActivity.class);
+        startActivity(intent);
     }
 
 //    public void ComprobarNumero(int numero){
