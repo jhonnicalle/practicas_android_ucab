@@ -100,14 +100,17 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 //        });
 
         // Add a marker in Sydney and move the camera
-        LatLng latlon = new LatLng(10.464737388051745, -66.97377005577853);
+
+        double lat = Double.parseDouble(getIntent().getStringExtra("latitud"));
+        double lon = Double.parseDouble(getIntent().getStringExtra("longitud"));
+        LatLng latlon = new LatLng(lat, lon);
         mMap.addMarker(new MarkerOptions().position(latlon).title("Bienvenido a Venezuela"));
 
         CameraPosition camPos = new CameraPosition.Builder()
                 .target(latlon)   //Centramos el mapa en Madrid
                 .zoom(19)         //Establecemos el zoom en 19
                 .bearing(45)      //Establecemos la orientación con el noreste arriba
-                .tilt(70)         //Bajamos el punto de vista de la cámara 70 grados
+                .tilt(60)         //Bajamos el punto de vista de la cámara 70 grados
                 .build();
 
         //mMap.moveCamera(CameraUpdateFactory.newLatLng(latlon));

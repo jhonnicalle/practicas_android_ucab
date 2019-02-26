@@ -3,6 +3,6 @@
     <string name="title_activity_maps">Map</string>
 
 
-    <string name="boton_localiza_maps">Ingresa al Mapa</string>
+    <string name="boton_localiza_maps">Obtener coordenadas</string>
     <string name="boton_ingresa_maps">Ingresa al Mapa</string>
 </resources>
